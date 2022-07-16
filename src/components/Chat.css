@@ -1,0 +1,137 @@
+.chat-header {
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 1.2rem 0rem;
+  border-bottom: 2px solid #7f8f9a;
+  z-index: 4;
+  background-color: white;
+}
+.no-chat {
+  padding: 20rem 0rem;
+  text-align: center;
+  color: #7f8f9a;
+  font-size: 1.6rem;
+}
+.message-form {
+  position: absolute;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  bottom: 0;
+  left: 5%;
+  display: flex;
+  width: 90%;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #22577e;
+  z-index: 1;
+}
+.message-form label {
+  flex: 1;
+  padding: 0rem 0rem 0rem 1rem;
+}
+.message-form .text {
+  flex: 9;
+}
+.text input {
+  width: 95%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background-color: #4f6c83;
+  color: white;
+}
+.text input::placeholder {
+  color: rgb(190, 190, 190);
+}
+.text input:hover,
+.text input:focus {
+  outline: none;
+}
+.message-form .send-btn {
+  flex: 1;
+}
+.sm-send {
+  display: none;
+}
+.message-form .send-btn button {
+  width: 3.5rem;
+  padding: 0.3rem 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #7f8f9a;
+  border-radius: 15px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.message-form .send-btn button:hover {
+  background-color: #4f6c83;
+}
+.chats {
+  height: 67vh;
+  overflow-y: auto;
+  border-bottom: 2px solid #4f6c83;
+  background-image: url("../assets/chatimage.png");
+  background-size: cover;
+}
+.message-wrapper {
+  margin-top: 5px;
+  padding: 0rem 1rem;
+}
+.message-wrapper img {
+  border: 1px solid #22577e;
+  border-radius: 5px;
+  width: 100%;
+}
+.message-wrapper p {
+  padding: 1.5rem;
+  display: inline-block;
+  max-width: 50%;
+  text-align: left;
+  border-radius: 5px;
+}
+.message-wrapper small {
+  display: inline-block;
+  margin-top: 0.9rem;
+  opacity: 0.8;
+}
+.message-wrapper.own {
+  text-align: right;
+}
+.me {
+  background-color: #f9feae;
+  color: #22577e;
+}
+.friend {
+  background-color: #22577e;
+  color: #f9feae;
+}
+@media screen and (max-width: 720px) {
+  .message-wrapper p {
+    max-width: 100%;
+  }
+  .message-form {
+    padding: 0.5rem 0rem;
+    margin: 0.5rem 0rem;
+    /* width: 100%; */
+  }
+  .send-btn {
+    display: none;
+  }
+  .sm-send {
+    display: block;
+  }
+  .sm-send button {
+    background: transparent;
+    border: none;
+    align-items: center;
+    margin-top: 0.4rem;
+    margin-right: 0.3rem;
+  }
+  .sm-send img {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+}

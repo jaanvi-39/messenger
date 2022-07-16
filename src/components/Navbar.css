@@ -1,0 +1,154 @@
+.navbar {
+  display: flex;
+  background: #22577e;
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+  padding: 1rem 3rem;
+  width: 100%;
+  box-shadow: 1px 1px 10px gray;
+}
+.nav-burger,
+.burger-items {
+  display: none;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  flex: 2;
+}
+.nav-logo img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  color: #ffffff;
+  background: transparent;
+  fill: #ffffff;
+  margin-right: 1rem;
+}
+.title {
+  text-decoration: none;
+  color: white;
+}
+.nav-items a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0rem 1rem;
+}
+.my-profile {
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.5rem 0.1rem;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.3rem;
+}
+.btn-logout {
+  margin-left: 2rem;
+  border: 1px solid #ffffff;
+  background: transparent;
+  padding: 0.5rem 0.5rem;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 802px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .nav-logo {
+    font-size: 1rem;
+  }
+  .nav-logo img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 738px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+  .nav-logo {
+    font-size: 1rem;
+  }
+  .nav-burger {
+    display: block;
+  }
+  .nav-logo img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+  .nav-list {
+    display: none;
+  }
+  .btn-burger {
+    background: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+    z-index: 40;
+  }
+  .btn-cross {
+    background: transparent;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+  .btn-cross img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .burger-items {
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 7;
+    height: 100vh;
+    font-size: 1.5rem;
+    background: #22577e;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 2rem 2rem;
+    transition: all 0.3s ease;
+  }
+  .btn-logout {
+    width: 7rem;
+    margin: 2rem auto;
+  }
+  .burger-item {
+    text-decoration: none;
+    color: white;
+    margin: 2rem 0rem;
+    padding: 1rem 0rem;
+    border-bottom: 2px solid #5584ac;
+  }
+  .hide {
+    transform: translateX(100%);
+  }
+  .show {
+    transform: translateX(0%);
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-burger img {
+    height: 2.5rem;
+    background: none;
+  }
+}

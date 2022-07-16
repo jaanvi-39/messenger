@@ -1,0 +1,43 @@
+.dashboard {
+  display: flex;
+  justify-content: center;
+  max-height: 90vh;
+}
+.sidebar-components {
+  flex: 1;
+}
+.chat {
+  flex: 2;
+  border-right: 2px solid #7f8f9a;
+  color: #22577e;
+  position: relative;
+}
+.details {
+  flex: 1;
+}
+@media screen and (max-width: 1210px) {
+  .details {
+    max-width: 20rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .details {
+    display: none;
+  }
+  .chat {
+    min-width: 40vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .chat {
+    min-width: 60vw;
+  }
+}
+/* @media screen and (max-width: 385px) {
+  .chat {
+    transform: translateX(100%);
+  }
+  .sidebar-components {
+    width: ;
+  }
+} */
