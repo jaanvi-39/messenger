@@ -24,6 +24,7 @@ const Chat = ({ chat }) => {
   const { currentUser } = useAuth();
   const [loading, setLoading] = useState(false);
   const user1 = currentUser.uid;
+  const [chatToggle, setChatToggle] = useState(false);
 
   useEffect(() => {
     const user2 = chat.uid;
@@ -51,7 +52,6 @@ const Chat = ({ chat }) => {
 
     let url;
     if (img) {
-      
       const imgRef = ref(storage, `images/${new Date().getTime()}-${img.name}`);
       const snap = await uploadBytes(imgRef, img);
       const dlurl = await getDownloadURL(ref(storage, snap.ref.fullPath));

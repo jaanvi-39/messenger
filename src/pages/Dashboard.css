@@ -28,15 +28,17 @@
     min-width: 40vw;
   }
 }
+
 @media screen and (max-width: 500px) {
   .chat {
     min-width: 60vw;
   }
+  .details {
+    display: none;
+  }
 }
 /* @media screen and (max-width: 385px) {
-  .chat {
-    transform: translateX(100%);
-  }
+  
   .sidebar-components {
     width: ;
   }

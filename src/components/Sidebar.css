@@ -119,6 +119,11 @@
 .user-details input:focus {
   outline: none;
 }
+/* @media screen and (max-width: 600px) {
+  .sidebar {
+    max-width: 100vw;
+  }
+} */
 @media screen and (max-width: 500px) {
   .user-image {
     display: none;

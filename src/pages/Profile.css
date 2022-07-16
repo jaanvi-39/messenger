@@ -14,7 +14,7 @@
   flex: 1;
 }
 
-.details {
+.details-user {
   flex: 1;
 }
 .details-container {
@@ -71,7 +71,7 @@
   border: 2px solid #22577e;
 }
 @media screen and (max-width: 1000px) {
-  .details {
+  .details-user {
     width: 100%;
     display: block;
     background: white;
