@@ -39,7 +39,7 @@ const Sidebar = ({ chat, setChat }) => {
     const user2 = user.uid;
     const id = user1 > user2 ? `${user1 + user2}` : `${user2 + user1}`;
     const docSnap = await getDoc(doc(firestore, "lastMessage", id));
-    if (docSnap.data().from !== user1) {
+    if (docSnap.data() && docSnap.data().from !== user1) {
       await updateDoc(doc(firestore, "lastMessage", id), { unread: false });
     }
   };
